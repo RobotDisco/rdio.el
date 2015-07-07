@@ -1,4 +1,4 @@
-;;; holydiver.el --- Control the OS X Rdio app from within Emacs
+;;; holydiver.el --- Control the OS X Rdio app from within Emacs -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015 Gaelan D'costa
 
