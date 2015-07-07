@@ -29,6 +29,11 @@
 
 ;;; Code:
 
+(defun rdio-play-pause-app ()
+  "Tell the Rdio app to pause/resume"
+  (let ((script "tell application \"Rdio\" to playpause"))
+    (shell-command (format "osascript -e %S" script))))
+
 (provide 'rdio)
 
 ;;; rdio.el ends here
