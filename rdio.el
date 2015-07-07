@@ -1,11 +1,11 @@
-;;; holydiver.el --- Control the OS X Rdio app from within Emacs -*- lexical-binding: t -*-
+;;; rdio.el --- Control the OS X Rdio app from within Emacs -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015 Gaelan D'costa
 
 ;; Author: Gaelan D'costa <gdcosta@gmail.com>
 ;; Maintainer: Gaelan D'costa <gdcosta@gmail.com>
 ;; Version: 0.0.1-pre
-;; URL: http://github.com/robotdisco/holydiver
+;; URL: http://github.com/robotdisco/rdio.el
 ;; Package-Requires:
 
 ;; This file is NOT part of GNU Emacs.
@@ -29,6 +29,6 @@
 
 ;;; Code:
 
-(provide 'holydiver)
+(provide 'rdio)
 
-;;; holydiver.el ends here
+;;; rdio.el ends here
