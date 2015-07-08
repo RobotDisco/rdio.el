@@ -29,10 +29,28 @@
 
 ;;; Code:
 
-(defun rdio-play-pause-app ()
-  "Tell the Rdio app to pause/resume"
-  (let ((script "tell application \"Rdio\" to playpause"))
+(defconst rdio-script-prefix "tell application \"Rdio\" to "
+  "This Applescript is how you tell the Rdio app to do anything.")
+
+(defun rdio-tell-app-to (action)
+  "Tell the Rdio app to ACTION via the Applescript command line tools."
+  (let ((script (concat rdio-script-prefix action)))
     (shell-command (format "osascript -e %S" script))))
+
+(defun rdio-play-pause-app ()
+  "Tell the Rdio app to pause/resume."
+  (interactive)
+  (rdio-tell-app-to "playpause"))
+
+(defun rdio-play-app ()
+  "Tell the Rdio app to start playing."
+  (interactive)
+  (rdio-tell-app-to "play"))
+
+(defun rdio-pause-app ()
+  "Tell the Rdio app to pause."
+  (interactive)
+  (rdio-tell-app-to "pause"))
 
 (provide 'rdio)
 
