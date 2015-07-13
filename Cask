@@ -3,6 +3,8 @@
 
 (package-file "rdio.el")
 
+(depends-on "s")
+
 (development
  (depends-on "f")
  (depends-on "ecukes")

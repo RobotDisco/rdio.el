@@ -35,7 +35,7 @@
 (defun rdio-tell-app-to (action)
   "Tell the Rdio app to ACTION via the Applescript command line tools."
   (let ((script (concat rdio-script-prefix action)))
-    (shell-command (format "osascript -e %S" script))))
+    (shell-command-to-string (format "osascript -e %S" script))))
 
 (defun rdio-play-pause-app ()
   "Tell the Rdio app to pause/resume."
@@ -51,6 +51,14 @@
   "Tell the Rdio app to pause."
   (interactive)
   (rdio-tell-app-to "pause"))
+
+(defun rdio-current-track ()
+  "Display the track currently playing on Rdio."
+  (interactive)
+  (let ((current-artist (rdio-tell-app-to "get the artist of current track"))
+        (current-track (rdio-tell-app-to "get the name of current track")))
+    (message
+     (s-collapse-whitespace (format "Rdio is playing: %s - %s" current-artist current-track)))))
 
 (provide 'rdio)
 
