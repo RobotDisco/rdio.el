@@ -1,0 +1,12 @@
+rdio.el allows Emacs to control the OS X Rdio application.
+
+It does this using OSX Rdio's built-in Applescript interface.
+
+Unfortunately this is OSX-specific right now, I'd love to find a way to work
+a platform-agnostic solution (but Rdio's player framework requires some thought
+in order to potentially achieve this.)
+
+(rdio.el is currently small enough that it's a better documentation that the
+software writer could ever be. For people new to Emacs, any function that
+contains an (interactive) statement can be run via M-x. You can use standard
+Emacs config to set up whatever hotkeys you like!)
