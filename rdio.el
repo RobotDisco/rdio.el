@@ -4,7 +4,8 @@
 
 ;; Author: Gaelan D'costa <gdcosta@gmail.com>
 ;; Maintainer: Gaelan D'costa <gdcosta@gmail.com>
-;; Version: 0.0.1-pre
+;; Created: 6 Jul 2015
+;; Version: 0.1.0
 ;; URL: http://github.com/robotdisco/rdio.el
 ;; Package-Requires:
 
